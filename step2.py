@@ -18,3 +18,8 @@ print(f"Average Chat Usage: {np.mean(chat_usage):.1f}")
 print(f"Average Video Usage: {np.mean(video_usage):.1f}")
 print(f"Average Study Usage: {np.mean(study_usage):.1f}")
 print(f"Average Games Usage: {np.mean(games_usage):.1f}")
+
+diff=study_usage-games_usage
+print("Difference between Study and Games Usage:", diff)
+
+print("Best day for Study Usage vs Games Usage:", int(np.argmax(study_usage)+1),"with difference of", np.max(diff))
